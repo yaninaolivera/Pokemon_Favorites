@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokemon | Login</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fuentes.css">
+        <link rel="stylesheet" href="css/icons.min.css">
+        <link rel="stylesheet" href="css/toastr.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-pokemons">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-1 mt-5 bg-white">
+                    <div class="text-center mt-5">
+                        <h1><b>BIENVENIDO!</b></h1>
+                        <h2 class="text-pink"><b><i>Pokemon Favorites</i></b></h2>
+                        <h4 class="text-secondary mt-5"><b>Iniciar Sesión</b></h4><hr>
+                    </div>
+                    <form id="form_login" class="form-login" onsubmit="return iniciar_sesion()">
+                        <div class="mb-3">
+                            <label class="text-secondary"><b>Usuario</b></label>
+                            <input type="text" class="form-control" name="username" id="username" autocomplete="off" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="text-secondary"><b>Contraseña</b></label>
+                            <input type="password" class="form-control" name="password" id="password" required>
+                        </div>
+                        <p class="text-center text-danger" id="alert"></p>
+                        <div class="text-center d-grid mb-3">
+                            <button type="submit" class="btn btn-pink"><i class="fe-arrow-right-circle"></i> Ingresar</button>
+                        </div>
+                        <div class="text-center d-grid mb-5">
+                            <a href="singup.html" class="btn btn-warning"><i class="fe-user"></i> Registrarse</a>
+                            <span class="mt-3"><i>© Derechos reservados 2022 - <b>Certus</b></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/toastr.min.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
