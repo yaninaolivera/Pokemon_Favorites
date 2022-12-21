@@ -10,6 +10,10 @@
     border-radius: 10px;
 }
 
+.bg-pink{
+    background-color: crimson;
+}
+
 .text-pink{
     color: crimson;
 }
@@ -26,4 +30,21 @@
 .btn-pink:hover {
     background-color: crimson;
     color: white;
+}
+
+.btn-pink:focus{
+    background-color: crimson;
+    color: white;
+}
+
+.bg-profile {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.profile {
+    position: relative;
+    margin-top: -90px;
+    width: 167.5px;
+    border-radius: 50%;
 }

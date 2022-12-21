@@ -2,7 +2,7 @@ function iniciar_sesion() {
     $("input").removeClass("is-valid is-invalid")
     $("#alert").empty()
 
-    let url = "http://localhost:3000/api/login"
+    let url = "http://localhost:3000/user/login"
     let user = {
         username: $("#username").val(),
         password: $("#password").val()
@@ -23,10 +23,11 @@ function iniciar_sesion() {
         }else{
             let localStorage = window.localStorage
             localStorage.setItem("id_user", JSON.stringify(response[0]["_id"]))
+            localStorage.setItem("username", JSON.stringify(response[0]["username"]))
             window.location.href = "index.html"
         }
     }).catch(function (error) {
-        toastr.warning('Error en el servidor!', 'Oops...')
+        toastr.warning('Error en el servidor!', 'Oops...', { "positionClass": "toast-bottom-left" })
     })
     
     return false

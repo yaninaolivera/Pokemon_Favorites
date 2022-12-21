@@ -10,7 +10,7 @@ function registrarse() {
         return false
     }
 
-    let url = "http://localhost:3000/api/register"
+    let url = "http://localhost:3000/user/register"
     let new_user = {
         full_name: $("#full_name").val(),
         email_address: $("#email_address").val(),
@@ -29,16 +29,16 @@ function registrarse() {
         if (response.status == 1) {
             let localStorage = window.localStorage
             localStorage.setItem("id_user", JSON.stringify(response.data["_id"]))
-            toastr.success('Bienvenido a Pokemon Favorites', 'Registrado correctamente')
-            setTimeout(() => {
-                window.location.href = "index.html"
-            }, 1000);
+            localStorage.setItem("username", JSON.stringify(response.data["username"]))
+            localStorage.setItem("new_user", JSON.stringify("true"))
+            toastr.success('Bienvenido a Pokemon Favorites', 'Registrado correctamente', { "positionClass": "toast-bottom-left" })
+            window.location.href = "index.html"
         }else{
             $("#username").addClass("is-invalid")
-            toastr.warning(response.data, 'Oops...')
+            toastr.warning(response.data, 'Oops...', { "positionClass": "toast-bottom-left" })
         }
     }).catch(function (error) {
-        toastr.warning('Error en el servidor!', 'Oops...')
+        toastr.warning('Error en el servidor!', 'Oops...', { "positionClass": "toast-bottom-left" })
     })
 
     return false

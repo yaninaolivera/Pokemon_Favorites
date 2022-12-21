@@ -27,4 +27,29 @@ router.post("/login", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+router.get("/profile/:id", (req, res) => {
+    const {id} = req.params;
+    userSchema
+        .findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
+router.put("/update/:id", (req, res) => {
+    const {id} = req.params;
+    const {full_name, email_address, username, password} = req.body;
+    userSchema
+        .updateOne({_id: id}, {$set: {full_name, email_address, username, password}})
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
+router.delete("/delete/:id", (req, res) => {
+    const {id} = req.params;
+    userSchema
+        .remove({_id: id})
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
 module.exports = router;
