@@ -5,7 +5,7 @@
 - MongoDB, NodeJS, Express
 
 # Tecnologías FrontEnd
-- HTML, JS, CSS, BOOTSTRAP, JQUERY
+- Html, Js, Css, Bootstrap, JQuery
 
 # Integrantes
 - Yanina Lizbeth Olivera Vásquez
