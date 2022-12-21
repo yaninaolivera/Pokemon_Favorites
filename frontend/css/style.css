@@ -1,0 +1,29 @@
+.bg-pokemons{
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-white{
+    border-radius: 10px;
+}
+
+.text-pink{
+    color: crimson;
+}
+
+.form-login{
+    margin: 20px;
+}
+
+.btn-pink{
+    background-color: crimson;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: crimson;
+    color: white;
+}
